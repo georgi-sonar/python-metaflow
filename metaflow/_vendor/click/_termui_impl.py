@@ -416,7 +416,8 @@ def _tempfilepager(generator, cmd, color):
     try:
         os.system('{} "{}"'.format(cmd, filename))
     finally:
-        os.unlink(filename)
+        filename.close() # https://stackoverflow.com/questions/28067328/why-does-pythons-tempfile-method-unlink-require-a-filename
+        os.unlink(filename.name)
 
 
 def _nullpager(stream, generator, color):
