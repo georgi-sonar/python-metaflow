@@ -98,7 +98,7 @@ class MetadataCheck(MetaflowCheck):
 
     def assert_log(self, step, logtype, value, exact_match=True):
         log_value = self.get_log(step, logtype)
-        if log_value == value or (not exact_match and value in log_value)
+        if log_value == value or (not exact_match and value in log_value):
             return True
         else:
             raise AssertLogFailed(
