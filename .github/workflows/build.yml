@@ -8,7 +8,7 @@ on:
 permissions: read-all
 jobs:
   sonarcloud:
-    name: SonarCloud
+    name: Sonar Cloud scan
     runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
