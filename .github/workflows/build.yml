@@ -26,6 +26,8 @@ jobs:
           python3 -m pip install tox numpy
       - name: Execute Python tests
         run: tox
+      - name: Show coverage
+        run: ls coverage-reports
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
